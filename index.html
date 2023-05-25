@@ -12,6 +12,7 @@
 <body>
     <section class="form_poo">
         <form class="row g-3 needs-validation" id="formPersona" novalidate>
+          <h2>Formulario</h2>
             <div class="col-md-4">
               <label for="nombrePersona" class="form-label">Nombre</label>
               <input type="text" name="nombre" class="form-control" id="nombrePersona" required>
@@ -41,17 +42,44 @@
                 <option>Joto</option>
                 <option>Alienigena</option>
               </select>
+              <div class="valid-feedback">
+                Correcto
+              </div>
               <div class="invalid-feedback">
                 Ingrese el sexo
               </div>
+            </div>
+            <div class="col-md-4">
+              <label for="carreraEstudiante" class="form-label">Carrera</label>
+              <input type="text" name="carrera" class="form-control" id="carreraEstudiante" required>
+              <div class="valid-feedback">
+                Correcto
+              </div>
               <div class="invalid-feedback">
-                Please select a valid state.
+                Ingrese la carrera
               </div>
             </div>
             <div class="col-12">
                 <input type="submit" name="botonPersona" id="botonPersona" class="btn btn-primary">
             </div>
+            <div class="res1">
+              <!--Se muestra el 1 resultado Colocado Intencionalmente-->
+            </div>
+            <div class="resto">
+              <!--Se muestra el resultado Principal Ingresado-->
+            </div>
+            <div class="res2">
+              <!--Se muestra el 2 resultado Colocado seccion ESTUDIANTE-CARRERA-->
+            </div>
+            <div class="res3">
+              <!--Se muestra el 3 resultado Colocado seccion ESTUDIANTE-->
+            </div>
+            <div class="res4">
+              <!--Se muestra el 4 resultado Colocado seccion MAYOR DE EDAD-->
+            </div>
+
         </form>
     </section>
+  </section>
 </body>
 </html>
