@@ -6,29 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <title>Taller POO</title>
-    <script src="js/Persona.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script src="../js/Figura.js" defer></script>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Persona</a>
+        <a class="navbar-brand" href="../index.html">Persona</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="html/animal.html">Animal</a>
+              <a class="nav-link" href="animal.html">Animal</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="html/figura.html">Figura</a>
+              <a class="nav-link" href="figura.html">Figura</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="html/vehiculo.html">Vehiculo</a>
+              <a class="nav-link" href="vehiculo.html">Vehiculo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="html/figura.html">Figura</a>
+              <a class="nav-link" href="empleado.html">Empleado</a>
             </li>
           </ul>
         </div>
@@ -36,72 +36,53 @@
     </nav>
     <div id="form">
       <section class="form_poo">
-        <form class="row g-3 needs-validation" id="formPersona" novalidate>
+        <form class="row g-3 needs-validation" id="formFigura" novalidate>
           <h2>Formulario</h2>
             <div class="col-md-4">
-              <label for="nombrePersona" class="form-label">Nombre</label>
-              <input type="text" name="nombre" class="form-control" id="nombrePersona" required>
+              <label for="colorFigura" class="form-label">Color</label>
+              <input type="text" name="color" class="form-control" id="colorFigura" required>
               <div class="valid-feedback">
                 Correcto
               </div>
               <div class="invalid-feedback">
-                Ingrese nombre
+                Ingrese el color
               </div>
             </div>
             <div class="col-md-4">
-              <label for="edadPersona" class="form-label">Edad</label>
-              <input type="text" name="edad" class="form-control" id="edadPersona" required>
+              <label for="areaFigura" class="form-label">Area</label>
+              <input type="text" name="area" class="form-control" id="areaFigura" required>
               <div class="valid-feedback">
                 Correcto
               </div>
               <div class="invalid-feedback">
-                Ingrese la edad
+                Ingrese la area
               </div>
             </div>
-            <div class="col-md-3">
-              <label for="sexoPersona" class="form-label">Sexo</label>
-              <select class="form-select" name="sexo" id="sexoPersona" required>
-                <option selected disabled value="">....</option>
-                <option>Femenino</option>
-                <option>Masculino</option>
-                <option>Joto</option>
-                <option>Alienigena</option>
-              </select>
-              <div class="valid-feedback">
-                Correcto
-              </div>
-              <div class="invalid-feedback">
-                Ingrese el sexo
-              </div>
-            </div>
+            <h2>Circulo</h2>
             <div class="col-md-4">
-              <label for="carreraEstudiante" class="form-label">Carrera</label>
-              <input type="text" name="carrera" class="form-control" id="carreraEstudiante" required>
+              <label for="radioCirculo" class="form-label">Radio</label>
+              <input type="text" name="radio" class="form-control" id="radioCirculo" required>
               <div class="valid-feedback">
                 Correcto
               </div>
               <div class="invalid-feedback">
-                Ingrese la carrera
+                Ingrese el radio del circulo
               </div>
             </div>
             <div class="col-12">
-                <input type="submit" name="botonPersona" id="botonPersona" class="btn btn-primary">
+                <input type="submit" name="botonFigura" id="botonFigura" class="btn btn-primary">
             </div>
             <div class="res1" id="re">
               <!--Se muestra el 1 resultado Colocado Intencionalmente-->
             </div>
             <div class="res3" id="re">
-              <!--Se muestra el 3 resultado Colocado seccion ESTUDIANTE-->
+              <!--Se muestra el 3 resultado Colocado Intencionalmente CirculoArea-->
             </div>
             <div class="resto" id="rep">
-              <!--Se muestra el resultado Principal Ingresado-->
+              <!--Se muestra el 2 resultado Colocado calcular area-->
             </div>
             <div class="res2" id="rep">
-              <!--Se muestra el 2 resultado Colocado seccion ESTUDIANTE-CARRERA-->
-            </div>
-            
-            <div class="res4" id="rep">
-              <!--Se muestra el 4 resultado Colocado seccion MAYOR DE EDAD-->
+              <!--Se muestra el 3 resultado Colocado calcular area Circulo-->
             </div>
         </form>
       </section>

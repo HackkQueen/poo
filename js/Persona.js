@@ -60,14 +60,14 @@ class Estudiante extends Persona{
     this.carrera = carrera;
   }
   estudiar(){
-    return `La carrera que el estudiante ${this.nombre} esta estudiando es ${this.carrera}`;
+    return `Yo ${this.nombre} estoy estudiando ${this.carrera}`;
   }
 }
 
-let estudiante1=new Estudiante({nombre:"Maria Cubides",edad:225,sexo:"Alienigena",carrera:"Robot"});
+let estudiante1=new Estudiante({nombre:"Pepito Perez",edad:225,sexo:"Alienigena",carrera:"Naves Espaciales"});
 console.log(estudiante1.saludar());
 console.log(estudiante1.estudiar());
-document.querySelector('.res3').innerHTML = estudiante1.saludar() + ", teniendo encuenta eso:  " + estudiante1.estudiar();
+document.querySelector('.res3').innerHTML = estudiante1.saludar() + ", teniendo encuenta eso,  " + estudiante1.estudiar();
 /*
 TODO:  FORMULARIO
 */
@@ -86,7 +86,8 @@ formulario.addEventListener("submit",function(e){
     console.log(est.estudiar());
     document.querySelector('.res2').innerHTML = est.estudiar();
 
-    const esMayorDeEdad = Persona.esMayorDeEdad(persona.edad);
+    const esMayorDeEdad = Persona.esMayorDeEdad(persona1.edad);
     console.log(`La Persona ${persona1.nombre} es: ${esMayorDeEdad}`);
-    document.querySelector('.res4').innerHTML = `La Persona ${persona1.nombre} es: ${esMayorDeEdad}`;
+    document.querySelector('.res4').innerHTML = `La Persona ${persona1.nombre} es: ${esMayorDeEdad} Porque tiene ${persona1.getEdad} años.`;
 })
+
