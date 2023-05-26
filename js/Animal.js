@@ -37,7 +37,6 @@ class Animal{
     }
 }
 let animal1=new Animal({nombre:"Leon",edad:20,sonido:"Grrrr"});
-console.log(animal1.hacerSonido());
 document.querySelector('.resto').innerHTML = animal1.hacerSonido()
 
 
@@ -64,11 +63,9 @@ formulario.addEventListener("submit",function(e){
     let data=Object.fromEntries(new FormData(e.target));
     const animal=new Animal(data)
     animal.hacerSonido();
-    console.log(animal.hacerSonido());
     document.querySelector('.res1').innerHTML = animal.hacerSonido()
 
     const raza = e.target.raza.value;
     const mov = new Perro({ nombre: animal.nombre, raza});
-    console.log(mov.moverCola());
     document.querySelector('.res2').innerHTML = mov.moverCola();
 })

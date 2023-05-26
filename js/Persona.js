@@ -28,7 +28,7 @@ class Persona{
     sexo
     constructor({nombre,edad,sexo}){
         this.nombre=nombre;
-        this.edad=edad;
+        this.edad=parseInt(edad);
         this.sexo=sexo;
     }
     saludar(){
@@ -47,7 +47,6 @@ class Persona{
 }
 
 let persona1=new Persona({nombre:"Maria Cubides",edad:20,sexo:"Femenino"});
-console.log(persona1.saludar());
 document.querySelector('.res1').innerHTML = persona1.saludar()
 
 /*
@@ -65,8 +64,6 @@ class Estudiante extends Persona{
 }
 
 let estudiante1=new Estudiante({nombre:"Pepito Perez",edad:225,sexo:"Alienigena",carrera:"Naves Espaciales"});
-console.log(estudiante1.saludar());
-console.log(estudiante1.estudiar());
 document.querySelector('.res3').innerHTML = estudiante1.saludar() + ", teniendo encuenta eso,  " + estudiante1.estudiar();
 /*
 TODO:  FORMULARIO
@@ -78,16 +75,13 @@ formulario.addEventListener("submit",function(e){
     let data=Object.fromEntries(new FormData(e.target));
     const persona=new Persona(data)
     persona.saludar();
-    console.log(persona.saludar());
     document.querySelector('.resto').innerHTML = persona.saludar()
 
     const carrera = e.target.carrera.value;
     const est = new Estudiante({ nombre: persona.nombre, carrera });
-    console.log(est.estudiar());
     document.querySelector('.res2').innerHTML = est.estudiar();
 
     const esMayorDeEdad = Persona.esMayorDeEdad(persona1.edad);
-    console.log(`La Persona ${persona1.nombre} es: ${esMayorDeEdad}`);
     document.querySelector('.res4').innerHTML = `La Persona ${persona1.nombre} es: ${esMayorDeEdad} Porque tiene ${persona1.getEdad} años.`;
 })
 
