@@ -19,3 +19,50 @@ TODO: VALIDACION DE FORMULARIO
       }, false)
     })
   })()
+
+class Empleado{
+  static id=0
+  nombre
+  edad
+  sueldo
+  constructor({nombre,edad,sueldo}){
+    this.nombre=nombre;
+    this.edad=parseInt(edad);
+    this.sueldo=parseFloat(sueldo);
+  }
+  calcularSalarioAnual(){
+    return `El salario anual de ${this.nombre} es de ${this.sueldo*12}`
+  }
+  static generarIdEmpleado(){
+    return ++Empleado.id;
+  }
+}
+let empleado1=new Empleado({nombre:"Nicolas",edad:20,sueldo:1200000});
+document.querySelector('.res1').innerHTML = empleado1.calcularSalarioAnual()
+
+class Gerente extends Empleado{
+  departamento
+  constructor({nombre, sueldo,departamento}){
+    super({ nombre, sueldo });
+    this.departamento=departamento;
+  }
+  calcularSalarioAnual(){
+    return `El salario anual del GERENTE es de ${(this.sueldo*0.1)*12}`
+  }
+}
+
+let gerente1=new Gerente({nombre:"Santiago",sueldo:2500000,departamento:"Sistemas"});
+document.querySelector('.res3').innerHTML = gerente1.calcularSalarioAnual()
+
+const formulario=document.getElementById("formEmpleado");
+formulario.addEventListener("submit",function(e){
+    e.preventDefault();
+    let data=Object.fromEntries(new FormData(e.target));
+    const empleado=new Empleado(data)
+    document.querySelector('.resto').innerHTML = empleado.calcularSalarioAnual()
+    const gerente=new Gerente(data)
+    document.querySelector('.res2').innerHTML = gerente.calcularSalarioAnual()
+
+    document.querySelector('.res4').innerHTML = Empleado.generarIdEmpleado()
+
+})

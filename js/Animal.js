@@ -29,7 +29,7 @@ class Animal{
     sonido
     constructor({nombre,edad,sonido}){
         this.nombre=nombre;
-        this.edad=edad;
+        this.edad=parseInt(edad);
         this.sonido=sonido;
     }
     hacerSonido(){

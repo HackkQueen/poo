@@ -1,25 +1,20 @@
 body {
-    background-image: url(https://w.wallhaven.cc/full/zy/wallhaven-zyxvqy.jpg);
+    background-image: url(https://w.wallhaven.cc/full/7p/wallhaven-7p39gy.png);
     background-size: cover;
     margin: 0;
     height: 100vh;
 }
 
-.form_poo {
-    height: 80vh;
+.container {
+    display: grid;
+    place-items: center;
+    height: 90vh;
     width: 600px;
     background-color: #ffffff60;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-#form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: auto;
 }
 
 h2 {
@@ -30,10 +25,15 @@ h2 {
     margin-bottom: 5px;
 }
 
-#re{
+#re {
     background-color: rgba(165, 42, 42, 0.534);
 }
 
-#rep{
+#rep {
     background-color: rgba(42, 81, 165, 0.534);
+}
+
+.form-content {
+    overflow-y: auto;
+    max-height: calc(80vh - 60px); /* Ajusta el valor según el tamaño del encabezado */
 }
