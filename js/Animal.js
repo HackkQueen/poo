@@ -56,6 +56,9 @@ class Perro extends Animal{
 
 }
 
+/*
+TODO: FORMULARIO
+*/
 
 const formulario=document.getElementById("formAnimal");
 formulario.addEventListener("submit",function(e){

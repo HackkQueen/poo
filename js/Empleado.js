@@ -20,6 +20,9 @@ TODO: VALIDACION DE FORMULARIO
     })
   })()
 
+/*
+TODO: CLASE PRINCIPAL EMPLEADO
+*/
 class Empleado{
   static id=0
   nombre
@@ -40,6 +43,9 @@ class Empleado{
 let empleado1=new Empleado({nombre:"Nicolas",edad:20,sueldo:1200000});
 document.querySelector('.res1').innerHTML = empleado1.calcularSalarioAnual()
 
+/*
+TODO: CLASE HEREDADA GERENTE
+*/
 class Gerente extends Empleado{
   departamento
   constructor({nombre, sueldo,departamento}){
@@ -53,6 +59,10 @@ class Gerente extends Empleado{
 
 let gerente1=new Gerente({nombre:"Santiago",sueldo:2500000,departamento:"Sistemas"});
 document.querySelector('.res3').innerHTML = gerente1.calcularSalarioAnual()
+
+/*
+TODO: FORMULARIO
+*/
 
 const formulario=document.getElementById("formEmpleado");
 formulario.addEventListener("submit",function(e){

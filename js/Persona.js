@@ -1,5 +1,5 @@
 /*
-TODO: VALIDACION DE FORMULARIO
+TODO: VALIDACION DE FORMULARIO.
 */
 (() => {
   'use strict'
